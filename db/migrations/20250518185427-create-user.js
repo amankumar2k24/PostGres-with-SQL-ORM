@@ -10,21 +10,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
-        type: Sequelize.STRING
-      },
-      lastName: {
-        type: Sequelize.STRING
-      },
-      userType: {
-        type: Sequelize.ENUM("1", "2", "3")
-      },
-      email: {
-        type: Sequelize.STRING
-      },
-      password: {
-        type: Sequelize.STRING
-      },
+      firstName: { type: Sequelize.STRING },
+      lastName: { type: Sequelize.STRING },
+      userType: { type: Sequelize.ENUM("1", "2", "3") },
+      email: { type: Sequelize.STRING },
+      password: { type: Sequelize.STRING },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -35,13 +25,11 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
       },
-      deletedAt: {
-        type: Sequelize.DATE
-      }
+      deletedAt: { type: Sequelize.DATE }
     });
   },
 
   async down(queryInterface, Sequelize) {
-      await queryInterface.dropTable('user');
+    await queryInterface.dropTable('user');
   }
 };

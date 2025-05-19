@@ -12,21 +12,11 @@ const User = sequelize.define(
       primaryKey: true,
       type: Sequelize.INTEGER
     },
-    firstName: {
-      type: Sequelize.STRING
-    },
-    lastName: {
-      type: Sequelize.STRING
-    },
-    userType: {
-      type: Sequelize.ENUM("1", "2", "3")
-    },
-    email: {
-      type: Sequelize.STRING
-    },
-    password: {
-      type: Sequelize.STRING
-    },
+    firstName: { type: Sequelize.STRING },
+    lastName: { type: Sequelize.STRING },
+    userType: { type: Sequelize.ENUM("1", "2", "3") },
+    email: { type: Sequelize.STRING },
+    password: { type: Sequelize.STRING },
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE,
@@ -37,9 +27,7 @@ const User = sequelize.define(
       type: Sequelize.DATE,
       defaultValue: Sequelize.NOW
     },
-    deletedAt: {
-      type: Sequelize.DATE
-    }
+    deletedAt: { type: Sequelize.DATE }
   },
   {
     sequelize,

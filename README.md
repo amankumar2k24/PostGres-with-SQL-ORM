@@ -13,7 +13,7 @@ https://sequelize.org/  - Reference of sequelize learning
 8. then run command npx sequelize-cli db:seed:all
 9. then run command npx sequelize-cli db:seed:all
 10. then run command npx sequelize-cli db:seed:all
-
+11. npx sequelize-cli db:migrate:undo       - FOR deleting the table from DB and then your edit in model will reflect
 
 # Note : If forgert to add phoneNumber or add a new key like phoneNumber in any model then run this command
 npx sequelize-cli migration:generate --name add-phoneNumber-to-user
